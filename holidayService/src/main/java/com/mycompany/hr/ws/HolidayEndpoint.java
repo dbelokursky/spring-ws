@@ -1,15 +1,5 @@
 package com.mycompany.hr.ws;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Arrays;
-import java.util.Date;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.ws.server.endpoint.annotation.Endpoint;
-import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
-import org.springframework.ws.server.endpoint.annotation.RequestPayload;
-
 import com.mycompany.hr.service.HumanResourceService;
 import org.jdom2.Element;
 import org.jdom2.JDOMException;
@@ -17,6 +7,14 @@ import org.jdom2.Namespace;
 import org.jdom2.filter.Filters;
 import org.jdom2.xpath.XPathExpression;
 import org.jdom2.xpath.XPathFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ws.server.endpoint.annotation.Endpoint;
+import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
+import org.springframework.ws.server.endpoint.annotation.RequestPayload;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 @Endpoint
 public class HolidayEndpoint {
@@ -63,5 +61,4 @@ public class HolidayEndpoint {
             throw new IllegalArgumentException("Could not evaluate [" + expression + "] on [" + element + "]");
         }
     }
-
 }
