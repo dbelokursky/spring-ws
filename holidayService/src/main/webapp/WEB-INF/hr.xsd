@@ -18,7 +18,6 @@
     </xs:complexType>
     <xs:complexType name="EmployeeType">
         <xs:sequence>
-            <xs:element name="Number" type="xs:integer"/>
             <xs:element name="FirstName" type="xs:string"/>
             <xs:element name="LastName" type="xs:string"/>
         </xs:sequence>
